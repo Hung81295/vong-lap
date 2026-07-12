@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bai 6</title>
+</head>
+<body>
+<script>
+  alert("Nhập 2 số a và b sao cho a nhỏ hơn b")
+  let a = Number(prompt("Nhap so a"));
+  let b = Number(prompt("Nhap so b"));
+  let tongLe = 0;
+  let tongChan = 0;
+  if (a > b) {
+    alert("Nhập số không chính xác")
+  } else {
+    for (let i = a; i <= b; i++) {
+      if (i % 2 === 0) {
+        tongChan += i;
+      } else {
+        tongLe += i;
+      }
+    }// không cho log trong if nhằm cho sạch code lưu ý phép toán thường dùng S+=i hay S+=i*(i+1) như các bài khác lưu ý
+    document.write(`Tổng số lẻ là: ${tongLe} <br>`);
+    document.write(`Tổng số chẵn là: ${tongChan}`);
+  }
+</script>
+</body>
+</html>
