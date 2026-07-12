@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 3</title>
+</head>
+<body>
+<script>
+  alert("Nhập số nguyên n bất kỳ");
+  let n=Number(prompt("Nhập số nguyên n"));
+  document.write(`Vì n= ${n} nên là các phần tử của dãy Fibonacci có giá trị lần lượt là: `);
+  let b=1
+  for (let a = 0; a < n; ) {
+    document.write(a+" ");
+    let tiepTheo=a+b;
+    a=b;
+    b=tiepTheo;
+  }
+</script>
+</body>
+</html>
