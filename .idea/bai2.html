@@ -7,22 +7,27 @@
 <body>
 <script>
   let cau = prompt("Nhập 1 câu bất kỳ");
-  cau = cau.trim();
-  let soKyTu = 0;
-  let soTu = 0;
-  if (cau.length > 0) {
-    soTu = 1;
-  }
-  for (let i = 0; i < cau.length; i++) {
-    soKyTu++;
-    if (cau[i] === " " && cau[i + 1] !== " ") {
-      soTu++
+  if (!cau || cau.trim() === "") {
+    document.write("Bạn chưa nhập gì cả")
+  } else {
+    cau = cau.trim();
+    let soKyTu = 0;
+    let soTu = cau.trim().split(/\s+/).length;
+    for (let i = 0; i < cau.length; i++) {
+      soKyTu++;
     }
-  }
-  document.write(`Câu đã nhập: ${cau} <br>`);
-  document.write(`Số từ: ${soTu}<br>`);
-  document.write(`Số ký tự: ${soKyTu}`);
+    //if (cau.length > 0) {
+    //soTu = 1; không cần đoạn này do dùng   let soTu = cau.trim().split(/\s+/).length;
+    //}
 
+    //if (cau[i] === " " && cau[i + 1] !== " ") {
+    // soTu++
+    // }
+    // }
+    document.write(`Câu đã nhập: ${cau} <br>`);
+    document.write(`Số từ: ${soTu}<br>`);
+    document.write(`Số ký tự: ${soKyTu}`);
+  }
 </script>
 </body>
 </html>
