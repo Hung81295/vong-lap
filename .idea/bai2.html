@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 2</title>
+</head>
+<body>
+<script>
+  let cau = prompt("Nhập 1 câu bất kỳ");
+  cau = cau.trim();
+  let soKyTu = 0;
+  let soTu = 0;
+  if (cau.length > 0) {
+    soTu = 1;
+  }
+  for (let i = 0; i < cau.length; i++) {
+    soKyTu++;
+    if (cau[i] === " " && cau[i + 1] !== " ") {
+      soTu++
+    }
+  }
+  document.write(`Câu đã nhập: ${cau} <br>`);
+  document.write(`Số từ: ${soTu}<br>`);
+  document.write(`Số ký tự: ${soKyTu}`);
+
+</script>
+</body>
+</html>
