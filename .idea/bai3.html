@@ -7,7 +7,11 @@
 <body>
 <script>
   alert("Nhập số nguyên n bất kỳ");
+
   let n=Number(prompt("Nhập số nguyên n"));
+  if (n <= 0 || isNaN(n)) {
+    alert("Vui lòng nhập số nguyên lớn hơn 0!");
+  }
   document.write(`Vì n= ${n} nên là các phần tử của dãy Fibonacci có giá trị lần lượt là: `);
   let b=1
   for (let a = 0; a < n; ) {
