@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 5</title>
+</head>
+<body>
+<div id="ketQua"></div>
+<script>
+  let n = Number(prompt("Nhap N"));
+  let S = 0;
+  for (let i = 1; i <= n; i++) {
+    S += 1 / (i ** 3);
+    // S=S+1/(i**3);
+  }
+  //document.getElementById("ketQua").innerHTML=`Với n = ${n}, giá trị biểu thức S là: ${S}`;
+  document.getElementById("ketQua").innerHTML=`Với n = ${n}, giá trị biểu thức S là: ${S.toFixed(4)}`;
+  //document.write(`Với n = ${n}, giá trị biểu thức S là: ${S}`);
+</script>
+</body>
+</html>
