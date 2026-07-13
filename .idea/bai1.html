@@ -5,13 +5,31 @@
   <title>bài 1</title>
 </head>
 <body>
+<h1 id="ketQua"></h1>
 <script>
-  alert("Nhập 1 số nguyên để tìm bội số của số đó");
+  /*alert("Nhập 1 số nguyên để tìm bội số của số đó");
   let soNguyen=Number(prompt("Nhập 1 số nguyên bất kỳ"));
   for (let i = 1; i <=20; i++) {
-    console.log(`${soNguyen*i} là bội số của ${soNguyen}`)
+    console.log(`${soNguyen*i} là bội số của ${soNguyen}`);
   }
-
+*/
+  /* let so=+prompt("nhap vao 1 so");
+   let soBoiSo=1;
+   let temp=1;
+   while (soBoiSo<=20){
+     if (temp%so===0){
+       document.write(`<h1>${temp}<h1>`)
+       soBoiSo++;
+     }
+     temp++
+   }
+   */
+  let so=Number(prompt("nhap so"));
+  let ketQua="";
+  for (let i = 1; i <20 ; i++) {
+    ketQua+=`${so*i}<br>`;
+  }
+  document.getElementById("ketQua").innerHTML=ketQua;
 </script>
 </body>
 </html>
